@@ -226,10 +226,9 @@ div .eu {
 .wrk h2 { 
    position: inherit;
     display: inline-block;
-    width: 100%;
     margin-top: 0;
     padding: 0;
-    left: 45%;
+    left:12%;
 }
 
 img.drill { 
