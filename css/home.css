@@ -1,0 +1,293 @@
+div {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* main container starts */
+#wrapper{
+  display: grid;
+    width: 96vw;
+    height: auto;
+  grid-template-columns: 4% 4% 46% 30% 8% 8%;
+    grid-template-rows: minmax(20px, auto);
+    grid-template-areas: 
+    "menu menu main grn lang lang"
+    "menu menu main gry . ."
+    ". feat feat wrk wrk ."
+    "cntt cntt cntt cntt cntt cntt";
+     grid-gap: 0;
+    margin: 0 2% 3% 2%;
+}
+
+
+/* main image */
+
+div .eu { 
+    grid-area: menu/main;
+    position: absolute;
+    width: 56vw;
+    padding-top: 1em;
+      z-index: -1;
+}
+
+
+/* main blocks */
+
+.green { 
+    align-items: center;
+    grid-area: grn;
+    width: 80%;
+    height: 90%;
+    background: #18ec9f;
+    padding: 12%; 
+}
+
+.grey { 
+    grid-area: gry;
+    width: 80%;
+    height: 80%;
+    background-color: #262626;
+    color: #fff;
+    padding: 15%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+.grey #btnme{ 
+    height: 1.7em;
+    width: 6em;
+    padding: 0;
+    margin: 10% 0 0 45%;
+
+}
+
+
+/* work area */
+
+	.imgmask{
+		position: relative;
+	}
+
+	.imgmask:hover{
+		cursor: pointer;
+	}
+
+	.imgmask:hover img{
+		opacity: 0.5;
+	}
+
+	.imgmask:hover .mask{
+		transition: opacity 0.5s;
+		opacity: 1;
+	}
+
+	.mask{
+		opacity: 0;
+		position: absolute;
+		left: 5%;
+		bottom:0;
+	}
+
+.mask h3, h4 {
+    color: white;
+}
+
+.feat {
+   grid-area: feat;
+    width: 52vw;
+    height: 33.6vw;
+    background-color: black;
+    margin-top: 40%;
+}
+
+.wrk {
+    align-items: center;
+    grid-area: wrk;
+   justify-self: end;
+    text-align: center;
+    width: 17vw;
+    height: auto;
+   margin-top: 30%;
+}
+
+.wrk h2 { 
+   position: absolute;
+    padding: 8% 0;
+}
+
+img.drill { 
+    display: block;
+    position: relative;
+    z-index: -1;
+}
+
+#btnwrk {
+    grid-area: wrk;
+    height: 2em;
+    width: 7em;
+    margin-top: 10%;
+}
+
+/* mobile layout */
+@media screen and (min-width: 320px) and (max-width:667px){
+    
+/* get rid of green shadow on img */    
+    img.withbg { 
+    display: block;
+    box-shadow: none;
+    }
+       
+#wrapper{
+  display: grid;
+    width: 100vw;
+    height: auto;
+  grid-template-columns: 100%;
+    grid-template-rows: minmax(20px, auto);
+    grid-template-areas: 
+    "grn"
+    "main"
+    "gry"
+    "wrk"
+    "feat"
+    "cntt";
+     grid-gap: 0;
+    margin:0 0 8% 0;
+}
+    
+/* hide default menu */  
+    nav.menu1 { 
+    grid-area: grn;
+        display: none;
+} 
+    
+    nav.menu2 { grid-area: grn;
+    justify-self: end;
+        display: none;
+}
+   
+/* mone main img to green box */  
+div .eu { 
+    grid-area: grn /main;
+    position: relative;
+    width: 100%;
+    padding-top: 43%;
+    z-index: 1;
+}
+    
+.green { 
+    width: 70%;
+    height: 30%;
+    background: #18ec9f;
+    padding: 5% 0; 
+    position: relative;
+    left: 20%;
+}
+
+.grey { 
+    width: 60%;
+    height: 220px;
+    background-color: #262626;
+    color: #fff;
+    padding: 5% 20%;
+    margin: 0;
+}
+
+.grey #btnme{ 
+    align-self: center;
+  position: relative;
+    padding: 1% 2%;
+    margin: 7% 0 0 0;
+    width: 30%;
+}
+/* work area */
+    /* move feat title a bit to the right */
+	.mask{
+		left: 15%;
+		bottom:4%;
+	}
+
+.feat {
+   grid-area: feat;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin-top: 10%;
+}
+
+.wrk {
+    grid-area: wrk;
+    position: relative;
+    text-align: left;
+    width: 100%;
+   margin-top: 17%;
+}
+
+.wrk h2 { 
+   position: inherit;
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    left: 45%;
+}
+
+img.drill { 
+    display: block;
+    position: absolute;
+    width: 30%;
+    z-index: 1;
+    left: 25%;
+    bottom: 2%;
+}
+
+#btnwrk {
+    padding: 0;
+    margin-top: 0;
+    width: 25%;
+    left: 12%;
+}
+}
+
+
+@media screen and (min-width: 668px) and (max-width:954px){
+    .feat {
+    margin-top: 30%;
+}   
+}
+
+@media screen and (min-width: 955px) and (max-width:1110px){
+    .feat {
+    margin-top: 35%;
+}
+}
+
+@media screen and (max-width:1280px){
+    .mask {opacity: 1;}
+}
+    
+@media screen and (min-width: 1367px) {
+    div.eu { 
+    width: 722px;
+}
+    div .green { 
+    width: 80%;
+        height: 85%;
+}
+        div .grey { 
+    width: 81%;
+    height: 65%;
+}
+    .feat {
+    width: 661px;
+    height: 428px;
+        margin-top: 120px;
+}
+    .wrk {
+    width: 219px;
+}
+    .wrk h2 { 
+    padding: 104px 0;
+} 
+}
+
