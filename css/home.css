@@ -74,16 +74,20 @@ div .eu {
 	}
 
 	.imgmask:hover img{
-		opacity: 0.5;
+		-webkit-opacity: 0.5;
+        opacity: 0.5;
 	}
 
 	.imgmask:hover .mask{
+        -webkit-transition: opacity 0.5s;
 		transition: opacity 0.5s;
-		opacity: 1;
+		-webkit-opacity: 1;
+        opacity: 1;
 	}
 
 	.mask{
-		opacity: 0;
+		-webkit-opacity: 0;
+        opacity: 0;
 		position: absolute;
 		left: 5%;
 		bottom:0;
@@ -234,10 +238,10 @@ div .eu {
 img.drill { 
     display: block;
     position: absolute;
-    width: 30%;
-    z-index: 1;
-    left: 25%;
-    bottom: 2%;
+    width: 33%;
+    top: 0;
+    left: 0;
+    margin: -9% 0 0 26%;
 }
 
 #btnwrk {
@@ -262,7 +266,10 @@ img.drill {
 }
 
 @media screen and (max-width:1280px){
-    .mask {opacity: 1;}
+    .mask {
+        -webkit-opacity: 1;
+    opacity: 1;
+    }
 }
     
 @media screen and (min-width: 1367px) {
