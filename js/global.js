@@ -24,6 +24,4 @@ $(document).ready(function () {
         $('.mobile-menu').toggleClass('mobile-menu--open');
         return false;
     });
-    
-    $('div:first').on('click', $.noop);
 });
