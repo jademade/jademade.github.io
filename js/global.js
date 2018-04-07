@@ -16,8 +16,7 @@ $(document).ready(function () {
         }
     });
     
-    $(".burger").css('cursor', 'pointer');
-    $(".burger").on('click touch', '.burger', function () {
+    $(".burger").on('click touch', function () {
         $(".burger .burgerline:nth-of-type(1)").toggleClass("burgerline--1");
         $(".burger .burgerline:nth-of-type(2)").toggleClass("burgerline--2");
         $(".burger .burgerline:nth-of-type(3)").toggleClass("burgerline--3");
@@ -25,4 +24,6 @@ $(document).ready(function () {
         $('.mobile-menu').toggleClass('mobile-menu--open');
         return false;
     });
+    
+    $('div:first').on('click', $.noop);
 });
