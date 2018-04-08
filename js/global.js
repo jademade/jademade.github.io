@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
     
-    $("a").on('touchstart click', function (event) {
+    $("a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
@@ -16,7 +16,7 @@ $(document).ready(function () {
         }
     });
     
-    $(".burger").on('touchstart tap', function () {
+    $(".burger").on('click', function () {
         $(".burger .burgerline:nth-of-type(1)").toggleClass("burgerline--1");
         $(".burger .burgerline:nth-of-type(2)").toggleClass("burgerline--2");
         $(".burger .burgerline:nth-of-type(3)").toggleClass("burgerline--3");
