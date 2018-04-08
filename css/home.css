@@ -137,7 +137,7 @@ img.drill {
 @media screen and (min-width: 320px) and (max-width:667px){
     
 /* get rid of green shadow on img */    
-    img.withbg { 
+.withbg { 
     display: block;
     box-shadow: none;
     }
