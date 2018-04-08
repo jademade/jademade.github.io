@@ -23,40 +23,40 @@ div {
 
 /* main image */
 
-div .eu { 
+.eu { 
     grid-area: menu/main;
     position: absolute;
     width: 56vw;
     padding-top: 1em;
-      z-index: -1;
+    z-index: -1;
 }
-
 
 /* main blocks */
 
 .green { 
     align-items: center;
     grid-area: grn;
-    width: 80%;
+    width: 90%;
     height: 90%;
     background: #18ec9f;
-    padding: 12%; 
+    padding: 12%;
+    margin-left: -15%;
 }
 
 .grey { 
     grid-area: gry;
-    width: 80%;
+    width: 91%;
     height: 80%;
     background-color: #262626;
     color: #fff;
-    padding: 15%;
-    margin-top: 5%;
+    padding: 13%;
+    margin-top: 4%;
     margin-left: 20%;
 }
 
 .grey #btnme{ 
     height: 1.7em;
-    width: 6em;
+    width: 7em;
     padding: 0;
     margin: 10% 0 0 45%;
 
@@ -102,7 +102,7 @@ div .eu {
     width: 52vw;
     height: 33.6vw;
     background-color: black;
-    margin-top: 40%;
+    margin-top: 30%;
 }
 
 .wrk {
@@ -129,7 +129,7 @@ img.drill {
 #btnwrk {
     grid-area: wrk;
     height: 2em;
-    width: 7em;
+    width: 8em;
     margin-top: 10%;
 }
 
@@ -171,7 +171,7 @@ img.drill {
 }
    
 /* mone main img to green box */  
-div .eu { 
+.eu { 
     grid-area: grn /main;
     position: relative;
     width: 100%;
@@ -186,6 +186,7 @@ div .eu {
     padding: 5% 0; 
     position: relative;
     left: 20%;
+    margin: 0;
 }
 
 .grey { 
@@ -202,7 +203,7 @@ div .eu {
   position: relative;
     padding: 1% 2%;
     margin: 7% 0 0 0;
-    width: 30%;
+    width: 35%;
 }
 /* work area */
     /* move feat title a bit to the right */
@@ -247,21 +248,26 @@ img.drill {
 #btnwrk {
     padding: 0;
     margin-top: 0;
-    width: 25%;
+    width: 30%;
     left: 12%;
 }
 }
 
+@media screen and (min-width: 668px) {
+    .eumobile { 
+        display: none;
+}    
+}
 
 @media screen and (min-width: 668px) and (max-width:954px){
     .feat {
-    margin-top: 30%;
+    margin-top: 20%;
 }   
 }
 
 @media screen and (min-width: 955px) and (max-width:1110px){
     .feat {
-    margin-top: 35%;
+    margin-top: 25%;
 }
 }
 
@@ -273,16 +279,27 @@ img.drill {
 }
     
 @media screen and (min-width: 1367px) {
+        #wrapper{
+        justify-content: center;
+        width: 1311px;
+        margin: 0 auto 80px auto;
+}
+   
     div.eu { 
     width: 722px;
+    margin-top: 20px;
 }
-    div .green { 
-    width: 80%;
-        height: 85%;
+    .green { 
+    width: 90%;
+    height: 90%;
+    padding: 8% 13% 13% 13%;
+    margin-left: -20%;
 }
-        div .grey { 
-    width: 81%;
-    height: 65%;
+    .grey { 
+    width: 95%;
+    height: 80%;
+    margin-top: -5%;
+    margin-left: 20%;
 }
     .feat {
     width: 661px;

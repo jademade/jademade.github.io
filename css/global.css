@@ -20,15 +20,15 @@ nav {
 /*global ul with no effects*/
 ul li {
 	list-style: none;
-    font-size: 0.7em;
+    font-size: 0.9em;
         font-weight: 700;
        display: inline-block;
   position: relative;
+    margin-bottom: 5px;
 }
 
 	ul li a{
         font-size: inherit;
-	    padding-bottom:  5px;
 		color: #262626;
 		text-decoration: none;
         text-transform: uppercase;
@@ -47,13 +47,13 @@ h1, h2 {
 }
 
 h1 {
-     font-size: 3.5em;
+     font-size: 4em;
     letter-spacing: -0.27rem;
     margin-bottom: -0.11em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.35em;
     margin-top: 0em;
     margin-bottom: 0.4em;
 }
@@ -63,7 +63,7 @@ h3, h4, p {
 }
 
 h3 {
-  font-size: 0.85em;
+  font-size: 1em;
     margin-bottom: 0.5em;
     text-align: left;
 }
@@ -73,7 +73,7 @@ h4, p, a {
 }
 
 h4 {
-  font-size: 0.6em;
+  font-size: 0.7em;
     text-transform: uppercase;
     margin-bottom: 1.5em;
 }
@@ -89,7 +89,7 @@ h4:before {
 }
 
 p, a {
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 
 a, a:visited { 
@@ -203,10 +203,18 @@ img {
     width: 100%;
 }
 
-img.withbg { 
+img .withbg { 
     display: block;
     box-shadow: 1.5em 1.5em 0 -0.5em #18ec9f;
     }
+
+.desktop {
+  display: none;   
+}
+
+.mobile {
+    display: none;  
+}
 
 /* global button */
 
@@ -223,7 +231,7 @@ img.withbg {
     }
 
 .btn a {
-    font-size: 0.5em;
+    font-size: 0.6em;
         text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -288,14 +296,13 @@ img.withbg {
     z-index: -1;
 }
 
-footer { margin-top: 23%;
+footer { margin-top: 25%;
 }
 
 footer p {
     text-align: center;
-    font-size: 0.45rem;
+    font-size: 0.6rem;
 }
-
 
 /* media query font size larger screens*/
 @media screen and (min-width: 668px) and (max-width:1366px){
@@ -310,6 +317,9 @@ footer p {
       html {
     font-size: calc(14px + 18 * ((100vw - 320px) / 680));
   }
+
+/* show mobile imgs */
+    .mobile { display: block;}
      
 /* contact area */
 
@@ -328,17 +338,24 @@ footer p {
 }
 
 #btnmail {
-    width: 28%;
+    width: 35%;
 }
    
 
-footer { margin-top: 27%;
+footer { margin-top: 29%;
 }
+    
+    footer p { 
+        font-size: 0.45rem;
+    }
 
 }
     
     /* media query tablet and desktop all sizes*/
 @media screen and (min-width: 668px){
+    
+/* show desktop imgs */
+    .desktop{ display: block;}
     
 /*insert effects on buttons and links*/
 /*ul effects*/
@@ -356,7 +373,7 @@ footer { margin-top: 27%;
 		    content: '';
 		    display: block;
 		    position: absolute;
-		    bottom: 0;
+		    top: 101%;
 		    left: 0;
 		    height: 3px;
 		    width: 100%;
@@ -440,19 +457,20 @@ footer { margin-top: 27%;
 @media screen and (min-width: 1367px) {
   html { font-size: 30px; 
     } 
-        #wrapper{
-        display: grid;
-        justify-content: center;
+    
+    #wrapper{
+    justify-content: center;
     width: 1311px;
-        margin: 0 auto 80px auto;
+    margin: 0 auto 80px auto;
 }
-    .contactblk { 
-    width: 512px;
-    height: 128px;
+    
+     .contactblk { 
+    width: 600px;
+    height: 150px;
 }
     .footy {
     width: 1366px;
-        left: 50%;
+        left: 50%;   
   -webkit-transform:translate(-50%);
   transform:translate(-50%);
 }
