@@ -19,8 +19,8 @@ div {
     height: auto;
     -ms-grid-columns: 4% 4% 46% 30% 8% 8%;
         grid-template-columns: 4% 4% 46% 30% 8% 8%;
-    -ms-grid-rows: 26vw 27vw 1fr;  
-        grid-template-rows: 26vw 27vw 1fr;
+    -ms-grid-rows: 26vw 30vw 45vw;  
+        grid-template-rows: 26vw 30vw 45vw;
             grid-template-areas: 
     "menu menu main grn lang lang"
     "menu menu main gry . ."
@@ -59,6 +59,7 @@ div {
     -ms-grid-column: 4; 
     grid-area: gry;
     width: 91%;
+    height: 90%;
     background-color: #262626;
     color: #fff;
     padding: 0 13%;
@@ -112,7 +113,7 @@ div {
     width: 52vw;
     height: 33.6vw;
     background-color: black;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .wrk {
@@ -164,7 +165,6 @@ img.drill {
     display: -ms-grid;
     display: grid;
     width: 100vw;
-    height: auto;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 0.8fr 1.29fr 0.8fr 0.8fr 1fr;
@@ -201,15 +201,16 @@ nav.menu2 {
     -ms-grid-row: 1; 
     -ms-grid-column: 1;
     width: 45%;
+    height: auto;
     background: #18ec9f;
     position: relative;
     left: 20%;
     margin: 0;
+    z-index: -2;
 }
     
 .eu { 
     width: 100%;
-    z-index: 1;
     margin-top: 43%;
     padding: 0;
 }
@@ -218,11 +219,11 @@ nav.menu2 {
     -ms-grid-row: 3; 
     -ms-grid-column: 1;
     width: 70%;
+    height: auto;
     background-color: #262626;
     color: #fff;
     padding: 10% 15%;
     margin: 0;
-    z-index: 2;
 }
 
 .grey #btnme{ 
