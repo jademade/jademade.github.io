@@ -239,6 +239,7 @@ img {
     position: relative;
     border:3px solid #18ec9f; 
     border-radius: 8px; 
+    height: 1.8em;
     }
 
 .btn a {
@@ -284,7 +285,6 @@ img {
 /* contact area */
 
 .contactblk { 
-    grid-area: cntt;
     background-color: #262626;
     width: 45vw;
     height: 10vw;
@@ -292,13 +292,11 @@ img {
     color: #fff;
     text-align: center;
     padding: 5%;
-    margin: 10% auto 0 auto; 
+    margin: 10% auto 4% auto; 
 }
 
 #btnmail {
     position: relative;
-    grid-area: cntt;
-    padding: 4%;
     margin: 0 25%;
 }
 
@@ -352,18 +350,19 @@ footer p {
             align-content: center;
         grid-area: cntt;
         background-color: #262626;
-        width: 90%;
-        height: 200px;
+        width: 100%;
+        height: 50vw;
         color: #fff;
         text-align: center;
-        margin: 0 auto;
+        padding: 0;
+        margin: 0 auto 15px auto;
     }
     
     #btnmail {
-        width: 35%;
+        width: 45%;
     }
     footer {
-        margin-top: 29%;
+        margin-top: 25%;
     }
     
     footer p { 
@@ -490,15 +489,8 @@ footer p {
         font-size: 30px; 
     } 
     
-    #wrapper{
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        width: 1311px;
-        margin: 0 auto 80px auto;
-    }
-    
-    .contactblk { 
+    .contactblk {
+        margin-top: 120px;
         width: 600px;
         height: 150px;
     }

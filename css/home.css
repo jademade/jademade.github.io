@@ -19,22 +19,20 @@ div {
     height: auto;
     -ms-grid-columns: 4% 4% 46% 30% 8% 8%;
         grid-template-columns: 4% 4% 46% 30% 8% 8%;
-    -ms-grid-rows: 90% 1fr 1fr 1fr;  
-        grid-template-rows: minmax(20px, auto);
-        grid-template-areas: 
+    -ms-grid-rows: 26vw 27vw 1fr;  
+        grid-template-rows: 26vw 27vw 1fr;
+            grid-template-areas: 
     "menu menu main grn lang lang"
     "menu menu main gry . ."
-    ". feat feat wrk wrk ."
-    "cntt cntt cntt cntt cntt cntt";
+    ". feat feat wrk wrk .";
     grid-gap: 0;
-    margin: 0 2% 3% 2%;
+    margin: 0 2%;
 }
 
 
 /* main image */
 
 .eu { 
-    grid-area: menu/main;
     position: absolute;
     width: 56vw;
     padding-top: 1em;
@@ -51,9 +49,8 @@ div {
     -ms-grid-column: 4;
     grid-area: grn;
     width: 90%;
-    height: 90%;
     background: #18ec9f;
-    padding: 12%;
+    padding: 0 12%;
     margin-left: -15%;
 }
 
@@ -62,16 +59,13 @@ div {
     -ms-grid-column: 4; 
     grid-area: gry;
     width: 91%;
-    height: 80%;
     background-color: #262626;
     color: #fff;
-    padding: 13%;
-    margin-top: 4%;
+    padding: 0 13%;
     margin-left: 20%;
 }
 
 .grey #btnme{ 
-    height: 1.7em;
     width: 7em;
     padding: 0;
     margin: 10% 0 0 45%;
@@ -118,7 +112,7 @@ div {
     width: 52vw;
     height: 33.6vw;
     background-color: black;
-    margin-top: 30%;
+    margin-top: 20%;
 }
 
 .wrk {
@@ -129,12 +123,11 @@ div {
     -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-area: wrk;
-    -ms-grid-column-align: end;
-        justify-self: end;
+        -ms-grid-column-align: end;
+            justify-self: end;
     text-align: center;
     width: 17vw;
     height: auto;
-    margin-top: 30%;
 }
 
 .wrk h2 { 
@@ -153,7 +146,6 @@ img.drill {
     -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-area: wrk;
-    height: 2em;
     width: 8em;
     margin-top: 10%;
 }
@@ -175,17 +167,16 @@ img.drill {
     height: auto;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 100% 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: minmax(20px, auto);
-        grid-template-areas: 
+    -ms-grid-rows: 0.8fr 1.29fr 0.8fr 0.8fr 1fr;
+        grid-template-rows: 0.8fr 1.29fr 0.8fr 0.8fr 1fr;
+            grid-template-areas: 
     "grn"
-    "main"
+    "main"        
     "gry"
     "wrk"
-    "feat"
-    "cntt";
+    "feat";
     grid-gap: 0;
-    margin:0 0 8% 0;
+    margin:0 auto;
 }
     
 /* hide default menu */  
@@ -200,37 +191,38 @@ nav.menu2 {
     -ms-grid-row: 1; 
     -ms-grid-column: 1; 
     grid-area: grn;
-    -ms-grid-column-align: end;
-        justify-self: end;
+        -ms-grid-column-align: end;
+            justify-self: end;
     display: none;
 }
    
-/* mone main img to green box */  
-.eu { 
-    grid-area: grn /main;
-    position: relative;
-    width: 100%;
-    padding-top: 43%;
-    z-index: 1;
-}
-    
-.green { 
-    width: 70%;
-    height: 30%;
+/* mone main img to green box */      
+.green {
+    -ms-grid-row: 1; 
+    -ms-grid-column: 1;
+    width: 45%;
     background: #18ec9f;
-    padding: 5% 0; 
     position: relative;
     left: 20%;
     margin: 0;
 }
+    
+.eu { 
+    width: 100%;
+    z-index: 1;
+    margin-top: 43%;
+    padding: 0;
+}
 
-.grey { 
-    width: 60%;
-    height: 220px;
+.grey {
+    -ms-grid-row: 3; 
+    -ms-grid-column: 1;
+    width: 70%;
     background-color: #262626;
     color: #fff;
-    padding: 5% 20%;
+    padding: 10% 15%;
     margin: 0;
+    z-index: 2;
 }
 
 .grey #btnme{ 
@@ -238,9 +230,7 @@ nav.menu2 {
     -ms-grid-row-align: center; 
         align-self: center;
     position: relative;
-    padding: 1% 2%;
     margin: 7% 0 0 0;
-    width: 35%;
 }
 /* work area */
     /* move feat title a bit to the right */
@@ -256,7 +246,7 @@ nav.menu2 {
     width: 100%;
     height: auto;
     background-color: black;
-    margin-top: 10%;
+    margin-top: 0;
 }
 
 .wrk {
@@ -266,30 +256,27 @@ nav.menu2 {
     position: relative;
     text-align: left;
     width: 100%;
-    margin-top: 17%;
 }
 
 .wrk h2 { 
     position: inherit;
     display: inline-block;
-    margin-top: 0;
-    padding: 0;
-    left:12%;
+    padding: 10% 0 0 0;
+    left: 12%;
 }
 
 img.drill { 
     display: block;
     position: absolute;
     width: 33%;
-    top: 0;
-    left: 0;
-    margin: -9% 0 0 26%;
+    top: 20%;
+    left: 22%;
+    margin: 0;
 }
 
 #btnwrk {
     padding: 0;
     margin-top: 0;
-    width: 30%;
     left: 12%;
 }
 }
@@ -300,18 +287,6 @@ img.drill {
 }    
 }
 
-@media screen and (min-width: 668px) and (max-width:954px){
-    .feat {
-        margin-top: 20%;
-}   
-}
-
-@media screen and (min-width: 955px) and (max-width:1110px){
-    .feat {
-        margin-top: 25%;
-}
-}
-
 @media screen and (max-width:1280px){
     .mask {
         opacity: 1;
@@ -320,33 +295,38 @@ img.drill {
     
 @media screen and (min-width: 1367px) {
     #wrapper{
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        width: 1311px;
-        margin: 0 auto 80px auto;
+    display: -ms-grid;
+    display: grid;
+    width: 1311px;
+    height: auto;
+    -ms-grid-columns: 4% 4% 44% 32% 8% 8%;
+        grid-template-columns: 4% 4% 44% 32% 8% 8%;
+    -ms-grid-rows: 380px 380px 1fr;  
+        grid-template-rows: 380px 380px 1fr;
+            grid-template-areas: 
+    "menu menu main grn lang lang"
+    "menu menu main gry . ."
+    ". feat feat wrk wrk .";
+    grid-gap: 0;
+    margin: 0 auto;
 }
-   
-    div.eu { 
+       
+    .eu { 
         width: 722px;
         margin-top: 20px;
 }
     .green { 
-        width: 90%;
-        height: 90%;
-        padding: 8% 13% 13% 13%;
-        margin-left: -20%;
+        width: 85%;
+        padding: 0 13%;
+        margin-left: -15%;
 }
     .grey { 
-        width: 95%;
-        height: 80%;
-        margin-top: -5%;
         margin-left: 20%;
 }
     .feat {
         width: 661px;
         height: 428px;
-        margin-top: 120px;
+        margin-top: 90px;
 }
     .wrk {
         width: 219px;
