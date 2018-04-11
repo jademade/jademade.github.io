@@ -66,6 +66,8 @@ div {
     margin-left: 20%;
 }
 
+.grey p {padding: 0;}
+
 .grey #btnme{ 
     width: 7em;
     padding: 0;
@@ -178,25 +180,8 @@ img.drill {
     grid-gap: 0;
     margin:0 auto;
 }
-    
-/* hide default menu */  
-nav.menu1 { 
-    -ms-grid-row: 1; 
-    -ms-grid-column: 1; 
-    grid-area: grn;
-    display: none;
-} 
-
-nav.menu2 { 
-    -ms-grid-row: 1; 
-    -ms-grid-column: 1; 
-    grid-area: grn;
-        -ms-grid-column-align: end;
-            justify-self: end;
-    display: none;
-}
    
-/* mone main img to green box */      
+/* move main img to green box */      
 .green {
     -ms-grid-row: 1; 
     -ms-grid-column: 1;
@@ -225,6 +210,8 @@ nav.menu2 {
     padding: 10% 15%;
     margin: 0;
 }
+
+
 
 .grey #btnme{ 
     -ms-flex-item-align: center; 
@@ -280,12 +267,6 @@ img.drill {
     margin-top: 0;
     left: 12%;
 }
-}
-
-@media screen and (min-width: 668px) {
-    .eumobile { 
-        display: none;
-}    
 }
 
 @media screen and (max-width:1280px){
