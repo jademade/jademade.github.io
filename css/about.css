@@ -33,12 +33,13 @@ nav {
 #wrapper{
     display: -ms-grid;
     display: grid;
-    width: 99vw;
+    width: 100vw;
+    max-width: 100%;
     height: auto;
     -ms-grid-columns: 4% 4% 25% 17% 4% 30% 8% 8%;
         grid-template-columns: 4% 4% 25% 17% 4% 30% 8% 8%;
-    -ms-grid-rows: 26vw 7vw 35vw auto auto auto auto auto;  
-        grid-template-rows: 26vw 7vw 35vw auto auto auto auto auto;
+    -ms-grid-rows: 26vw 7vw 35vw auto auto auto auto auto auto auto;  
+        grid-template-rows: 26vw 7vw 35vw auto auto auto auto auto auto auto;
                 grid-template-areas: 
     "menu menu . . . grn lang lang"
     "stry stry stry . . . . ."
@@ -73,6 +74,13 @@ nav {
     padding: 0 12%;
     margin-left: -13%;
 }
+
+.greybg {
+     -ms-grid-row: 1;
+     -ms-grid-column: 1;
+     grid-area: grn;
+     display: none;
+    }
 
 .story {
     -ms-grid-row: 2;
@@ -217,11 +225,12 @@ nav {
     display: -ms-grid;
     display: grid;
     width: 100vw;
+    max-width: 100%;
     height: auto;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;  
-        -ms-grid-rows: 52vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto;  
-            grid-template-rows: 52vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto;
+        -ms-grid-rows: 52vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto auto;  
+            grid-template-rows: 52vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto auto;
             grid-template-areas: 
     "grn"
     "main"
@@ -243,6 +252,7 @@ nav {
 }
     /* move main img to green box */      
  .greybg {
+     display: block;
      -ms-grid-row: 1;
      -ms-grid-column: 1;
      grid-area: grn;
@@ -288,8 +298,6 @@ nav {
     -ms-grid-column: 1;
     padding: 0 2em 2em 2em;
 }
-
-.intro h3 {padding-bottom: 2em;}
     
 .sha {
         -ms-grid-row: 5;
@@ -327,13 +335,12 @@ nav {
 .act3 {
     -ms-grid-row: 11;
      -ms-grid-column: 1;
-    padding-top: 0;
+    padding-bottom: 0;
 }
     
-.pln {
+.plane {
     -ms-grid-row: 12;
      -ms-grid-column: 1;
-    padding-bottom: 1em;
 }
     
 .act4 {
@@ -345,7 +352,6 @@ nav {
 .bhz {
     -ms-grid-row: 14;
      -ms-grid-column: 1;
-    padding: 2em 0;
 }
     
 .cv {
@@ -392,9 +398,7 @@ nav {
     /* main image */
 
 .eufoto { 
-    position: absolute;
     width: 1366px;
-    z-index: -1;
 }
 
 /* title blocks */

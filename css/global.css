@@ -9,8 +9,6 @@ html {
     font-size: 14px;
     font-family: 'Open Sans';
     color: #262626;
-    background-color: #fff;
-    overflow-x: hidden;
 }
 
 nav {
@@ -350,11 +348,17 @@ footer p {
     }
     
 /* hide default menu */  
-nav.menu1 { 
+nav.menu1 {
+    grid-area: menu;
+    -ms-grid-row: 1; 
+    -ms-grid-column: 1;
     display: none;
 } 
 
 nav.menu2 { 
+    grid-area: menu;
+    -ms-grid-row: 1; 
+    -ms-grid-column: 1;
     display: none;
 }
     

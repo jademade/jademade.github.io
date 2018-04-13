@@ -16,6 +16,7 @@ div {
     display: -ms-grid;
     display: grid;
     width: 96vw;
+    max-width: 100%;
     height: auto;
     -ms-grid-columns: 4% 4% 46% 30% 8% 8%;
         grid-template-columns: 4% 4% 46% 30% 8% 8%;
@@ -167,6 +168,7 @@ img.drill {
     display: -ms-grid;
     display: grid;
     width: 100vw;
+    max-width: 100%;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 0.8fr 1.29fr 0.8fr 0.8fr 1fr;
