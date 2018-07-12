@@ -1,0 +1,399 @@
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* main container starts */
+#wrapper{
+    display: -ms-grid;
+    display: grid;
+    width: 96vw;
+    max-width: 100%;
+    height: auto;
+        -ms-grid-columns: 4% 0 4% 0 46% 0 30% 0 8% 0 8%;
+        grid-template-columns: 4% 4% 46% 30% 8% 8%;  
+        -ms-grid-rows: 26vw 0 31.35vw 0 26vw;  
+        grid-template-rows: 26vw 31.35vw 26vw;
+                grid-template-areas: 
+    "menu menu mies grn lang lang"
+    "menu menu gbdn gry . ."
+    ". . xfab icrc . .";
+    grid-gap: 0;
+    margin: 0 1% 10% 1%;
+}
+
+
+/* overlay effect */
+.content { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.overlay { 
+    position: absolute;
+    width: 100%;
+    height: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.wrk { 
+    opacity: 0;
+}
+
+/* main blocks */
+
+.mies { 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: mies;
+    position: relative;
+    width: 75%;
+    padding: 0;
+    margin-top: 5%;
+    margin-bottom: -5%;
+    margin-left: 8%;
+}
+
+.mies .content{
+    width: 70%;
+}
+
+.mies .overlay{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(83, 62, 187, 0.85);
+}
+
+.mies:hover .overlay{
+    height: 100%;
+}
+
+.green { 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+    grid-area: grn;
+    width: 90%;
+    background: #18ec9f;
+    padding: 0 12%;
+    margin-left: -12%;
+}
+
+.gbdn { 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+    grid-area: gbdn;
+    position: relative;
+    width: 75%;
+    padding: 0;
+    margin-top: 12%;
+    margin-left: 18%;
+}
+
+.gbdn .content{
+    width: 64%;
+}
+
+.gbdn .overlay{
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 45, 209, 0.85);
+}
+
+.gbdn:hover .overlay{
+    height: 100%;
+}
+
+.grey { 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
+    -ms-grid-row: 3; 
+    -ms-grid-column: 7; 
+    grid-area: gry;
+    width: 117%;
+    height: 85%;
+    background-color: #262626;
+    color: #fff;
+    padding: 0;
+    margin-left: 20%;
+    opacity: 1;
+}
+
+.xfab { 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+    grid-area: xfab;
+    position: relative;
+    width: 75%;
+    padding: 0;
+    margin-top: 8%;
+    margin-left: 0;
+    margin-bottom: -8%;
+}
+
+.xfab .content{
+    width: 60%;
+}
+
+.xfab .overlay{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 116, 36, 0.85);
+}
+
+.xfab:hover .overlay{
+    height: 100%;
+}
+
+.icrc { 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+    grid-area: icrc;
+    position: relative;
+    width: 115%;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 14%;
+    margin-bottom: 0;
+}
+
+.icrc .content{
+    width: 60%;
+}
+
+.icrc .overlay{
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 26, 68, 0.85);
+}
+
+.icrc:hover .overlay{
+    height: 100%;
+}
+
+
+/* mobile layout */
+@media screen and (min-width: 320px) and (max-width:667px){
+       
+#wrapper{
+    display: -ms-grid;
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        -ms-grid-rows: 50.5vw 0 40vw 0 auto 0 auto 0 auto 0 auto 0 auto;
+        grid-template-rows: 50.5vw 40vw auto auto auto auto auto;
+                grid-template-areas: 
+    "grn"
+    "wrk"
+    "gry"           
+    "mies"
+    "gbdn"
+    "xfab"
+    "icrc";
+    grid-gap: 0;
+    margin:0 auto;
+}
+      
+.green {
+    -ms-grid-row: 1; 
+    -ms-grid-column: 1;
+    width: 45%;
+    height: auto;
+    background: #18ec9f;
+    position: relative;
+    left: 20%;
+    margin: 0;
+}
+    
+.wrk { 
+    -ms-grid-row: 2; 
+    -ms-grid-column: 1;
+    grid-area: wrk;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+@media screen and (min-width: 320px) and (max-width:667px){
+       
+.mies{
+      -ms-grid-row: 7;
+      -ms-grid-column: 1;
+}
+       
+.green{
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+}
+       
+.gbdn{
+      -ms-grid-row: 9;
+      -ms-grid-column: 1;
+}
+       
+.grey{
+      -ms-grid-row: 5;
+      -ms-grid-column: 1;
+}
+       
+.xfab{
+      -ms-grid-row: 11;
+      -ms-grid-column: 1;
+}
+       
+.icrc{
+      -ms-grid-row: 13;
+      -ms-grid-column: 1;
+}
+       
+.wrk{
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+}
+
+}
+    
+.cap { 
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -40%);
+        -ms-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+}
+
+.drill { 
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left: 25%;
+}
+    
+.grey {
+   opacity: 0;
+    height: 0;
+}
+
+.mies { 
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+    
+.gbdn { 
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+   
+.xfab { 
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+    
+.icrc { 
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+}
+
+    
+@media screen and (min-width: 1367px) {
+    #wrapper{
+    display: -ms-grid;
+    display: grid;
+    width: 1366px;
+    height: auto;
+        -ms-grid-columns: 4% 0 4% 0 44% 0 32% 0 8% 0 8%;
+        grid-template-columns: 4% 4% 44% 32% 8% 8%;  
+        -ms-grid-rows: 380px 0 380px 0 1fr;  
+        grid-template-rows: 380px 380px 1fr;
+                grid-template-areas: 
+    "menu menu mies grn lang lang"
+    "menu menu gbdn gry . ."
+    ". . xfab icrc . .";
+    grid-gap: 0;
+    margin: 0 auto;
+}
+    
+       .mies { 
+    height: 360px;
+    margin-top: 10%;
+}
+    
+    .green { 
+        width: 84%;
+        padding: 0 13%;
+        margin-left: -7%;
+}
+    
+    .gbdn {
+    height: 360px;
+    margin-top: 18%;
+}
+    
+    .grey { 
+        margin-left: 20%;
+        height: 90%;
+        width: 105%;    
+} 
+    
+    .xfab { 
+    height: 360px;
+    margin-top: 28%;
+}
+    
+    .icrc { 
+    height: 360px;
+    width: 105%;
+    margin-top: 10%;
+    margin-left: 14%;
+}
+}

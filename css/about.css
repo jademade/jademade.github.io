@@ -1,16 +1,9 @@
-ul li a{
-		color: #ffffff;
-	}
-nav {
-    color: #ffffff;
-}
-
 .menu1 {
-    padding-left: 2vw;
+    padding-left: 1vw;
 }
 
 .menu2 {
-    padding-right: 1vw;
+    margin-right: -1vw;
 }
 
 .flex {
@@ -33,14 +26,14 @@ nav {
 #wrapper{
     display: -ms-grid;
     display: grid;
-    width: 100vw;
+    width: 96vw;
     max-width: 100%;
     height: auto;
-    -ms-grid-columns: 4% 4% 25% 17% 4% 30% 8% 8%;
-        grid-template-columns: 4% 4% 25% 17% 4% 30% 8% 8%;
-    -ms-grid-rows: 26vw 7vw 35vw auto auto auto auto auto auto auto;  
+        -ms-grid-columns: 4% 0 4% 0 25% 0 17% 0 4% 0 30% 0 8% 0 8%;
+        grid-template-columns: 4% 4% 25% 17% 4% 30% 8% 8%;  
+        -ms-grid-rows: 26vw 0 7vw 0 35vw 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto;  
         grid-template-rows: 26vw 7vw 35vw auto auto auto auto auto auto auto;
-                grid-template-areas: 
+                    grid-template-areas: 
     "menu menu . . . grn lang lang"
     "stry stry stry . . . . ."
     "int int int int cva cva cva cva"
@@ -67,25 +60,25 @@ nav {
 
 .green {
     -ms-grid-row: 1;
-    -ms-grid-column: 6;
+    -ms-grid-column: 11;
     grid-area: grn;
-    width: 86%;
+    width: 90%;
     background: #18ec9f;
     padding: 0 12%;
-    margin-left: -13%;
+    margin-left: -8.5%;
 }
 
 .greybg {
      -ms-grid-row: 1;
-     -ms-grid-column: 1;
+     -ms-grid-column: 11;
      grid-area: grn;
      display: none;
     }
 
 .story {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 5;
     grid-area: stry;
     background: #fff;
     padding-top: 1.8em;
@@ -100,9 +93,9 @@ nav {
 }
 
 .intro {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 7;
     grid-area: int;
     padding: 1em 2em;
 }
@@ -110,9 +103,9 @@ nav {
 .intro h3 {padding-bottom: 2em;}
 
 .cv {
-    -ms-grid-row: 3;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
+    -ms-grid-row: 5;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 7;
     grid-area: cva;
 }
 
@@ -140,82 +133,149 @@ nav {
 /* sha pic area */
 
 .sha {
-    -ms-grid-row: 4;
+    -ms-grid-row: 7;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
+    -ms-grid-column-span: 15;
     grid-area: sha;
+    width: 100vw;
 }
 
 .act1 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 9;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 7;
     grid-area: act1;
 }
 
 .act2 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
+    -ms-grid-row: 9;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 7;
     grid-area: act2;
 }
 
 /* bcn pic area */
 
 .bcn {
-    -ms-grid-row: 6;
+    -ms-grid-row: 11;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
+    -ms-grid-column-span: 15;
     grid-area: bcn;
+    width: 100vw;
 }
 
 .act22 {
-    -ms-grid-row: 7;
+    -ms-grid-row: 13;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 7;
     grid-area: act22;
 }
 
 .act3 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
+    -ms-grid-row: 13;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 7;
     grid-area: act3;
 }
 
 /* gva pic area */
 
 .gva {
-    -ms-grid-row: 8;
+    -ms-grid-row: 15;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
+    -ms-grid-column-span: 15;
     grid-area: gva;
+    width: 100vw;
 }
 
 .plane {
-    -ms-grid-row: 9;
+    -ms-grid-row: 17;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 7;
     grid-area: pln;
-    -ms-grid-column-align: center;
-        justify-self: center;
+        -ms-grid-column-align: center;
+            justify-self: center;
     width: 70%;
 }
 
 .act4 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
+    -ms-grid-row: 17;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 7;
     grid-area: act4;
 }
 
 /* bhz pic area */
 
 .bhz {
-    -ms-grid-row: 10;
+    -ms-grid-row: 19;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
+    -ms-grid-column-span: 15;
     grid-area: bhz;
+    width: 100vw;
+}
+
+@media screen and (min-width: 320px) and (max-width:667px){
+    .green{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+}
+    .greybg{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+}
+    .story{
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+}
+    .intro{
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
+}
+    .cv{
+        -ms-grid-row: 29;
+        -ms-grid-column: 1;
+}
+    .sha{
+        -ms-grid-row: 9;
+        -ms-grid-column: 1;
+}
+    .act1{
+        -ms-grid-row: 11;
+        -ms-grid-column: 1;
+}
+    .act2{
+        -ms-grid-row: 15;
+        -ms-grid-column: 1;
+}
+    .bcn{
+        -ms-grid-row: 13;
+        -ms-grid-column: 1;
+}
+    .act22{
+        -ms-grid-row: 17;
+        -ms-grid-column: 1;
+}
+    .act3{
+        -ms-grid-row: 21;
+        -ms-grid-column: 1;
+}
+    .gva{
+        -ms-grid-row: 19;
+        -ms-grid-column: 1;
+}
+    .plane{
+        -ms-grid-row: 23;
+        -ms-grid-column: 1;
+}
+    .act4{
+        -ms-grid-row: 25;
+        -ms-grid-column: 1;
+}
+    .bhz{
+        -ms-grid-row: 27;
+        -ms-grid-column: 1;
+}   
 }
 
 
@@ -227,11 +287,11 @@ nav {
     width: 100vw;
     max-width: 100%;
     height: auto;
-    -ms-grid-columns: 100%;
+        -ms-grid-columns: 100%;
         grid-template-columns: 100%;  
-        -ms-grid-rows: 52vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto auto;  
-            grid-template-rows: 52vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto auto;
-            grid-template-areas: 
+            -ms-grid-rows: 50.5vw 0 62vw 0 0.8fr 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto;  
+            grid-template-rows: 50.5vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto auto;
+                grid-template-areas: 
     "grn"
     "main"
     "stry"
@@ -254,7 +314,7 @@ nav {
  .greybg {
      display: block;
      -ms-grid-row: 1;
-     -ms-grid-column: 1;
+     -ms-grid-column: 11;
      grid-area: grn;
      position: relative;
      background-color: #262626;
@@ -392,9 +452,10 @@ nav {
     margin: 0 auto;
 }
     
-    nav.menu2 ul li {
-    padding: 0 0 0 0.4em;
+    .menu2 {
+    margin-right: 0.5vw;
 }
+    
     /* main image */
 
 .eufoto { 
@@ -402,14 +463,16 @@ nav {
 }
 
 /* title blocks */
-
 .green { 
-    width: 75%;
-}
-
+        width: 86%;
+        padding: 0 13%;
+        margin-left: -13%;
+    }
+    
 .story {  
     padding-top: 1.8em;
     padding-left: 1.5em;
+    margin-left: -1%;
 }
 
 

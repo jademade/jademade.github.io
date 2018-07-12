@@ -18,16 +18,16 @@ div {
     width: 96vw;
     max-width: 100%;
     height: auto;
-    -ms-grid-columns: 4% 4% 46% 30% 8% 8%;
-        grid-template-columns: 4% 4% 46% 30% 8% 8%;
-    -ms-grid-rows: 26vw 30vw 45vw;  
+        -ms-grid-columns: 4% 0 4% 0 46% 0 30% 0 8% 0 8%;
+        grid-template-columns: 4% 4% 46% 30% 8% 8%;  
+        -ms-grid-rows: 26vw 0 30vw 0 45vw;  
         grid-template-rows: 26vw 30vw 45vw;
-            grid-template-areas: 
+                grid-template-areas: 
     "menu menu main grn lang lang"
     "menu menu main gry . ."
     ". feat feat wrk wrk .";
     grid-gap: 0;
-    margin: 0 2%;
+    margin: 0 1%;
 }
 
 
@@ -47,20 +47,20 @@ div {
         -ms-flex-align: center; 
             align-items: center;
     -ms-grid-row: 1;
-    -ms-grid-column: 4;
+    -ms-grid-column: 7;
     grid-area: grn;
     width: 90%;
     background: #18ec9f;
     padding: 0 12%;
-    margin-left: -15%;
+    margin-left: -12%;
 }
 
 .grey { 
-    -ms-grid-row: 2; 
-    -ms-grid-column: 4; 
+    -ms-grid-row: 3; 
+    -ms-grid-column: 7; 
     grid-area: gry;
     width: 91%;
-    height: 90%;
+    height: 92%;
     background-color: #262626;
     color: #fff;
     padding: 0 13%;
@@ -109,9 +109,9 @@ div {
 }
 
 .feat {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
     grid-area: feat;
     width: 52vw;
     height: 33.6vw;
@@ -123,12 +123,12 @@ div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-grid-row: 3;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 2;
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
     grid-area: wrk;
-        -ms-grid-column-align: end;
-            justify-self: end;
+            -ms-grid-column-align: end;
+                justify-self: end;
     text-align: center;
     width: 17vw;
     height: auto;
@@ -146,12 +146,40 @@ img.drill {
 }
 
 #btnwrk {
-    -ms-grid-row: 3;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 2;
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
     grid-area: wrk;
     width: 8em;
     margin-top: 10%;
+}
+
+@media screen and (min-width: 320px) and (max-width:667px){
+       
+.green{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+       
+.grey{
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+}
+       
+.feat{
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+}
+       
+.wrk{
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+}
+       
+#btnwrk{
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+}
 }
 
 /* mobile layout */
@@ -169,11 +197,11 @@ img.drill {
     display: grid;
     width: 100vw;
     max-width: 100%;
-    -ms-grid-columns: 100%;
+        -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 0.8fr 1.29fr 0.8fr 0.8fr 1fr;
+        -ms-grid-rows: 0.8fr 0 1.29fr 0 0.8fr 0 0.8fr 0 1fr;
         grid-template-rows: 0.8fr 1.29fr 0.8fr 0.8fr 1fr;
-            grid-template-areas: 
+                grid-template-areas: 
     "grn"
     "main"        
     "gry"
@@ -231,7 +259,8 @@ img.drill {
 
 .feat {
    -ms-grid-row: 5;
-   -ms-grid-column: 1;
+   -ms-grid-column: 3;
+   -ms-grid-column-span: 3;
    grid-area: feat;
     width: 100%;
     height: auto;
@@ -240,12 +269,49 @@ img.drill {
 }
 
 .wrk {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
     grid-area: wrk;
     position: relative;
     text-align: left;
     width: 100%;
+}
+    
+@media screen and (min-width: 1367px) {
+    .green{
+      -ms-grid-row: 1;
+      -ms-grid-column: 7;
+}
+    .grey{
+      -ms-grid-row: 3;
+      -ms-grid-column: 7;
+}
+    .feat{
+      -ms-grid-row: 5;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
+}
+    .wrk{
+      -ms-grid-row: 5;
+      -ms-grid-column: 7;
+      -ms-grid-column-span: 3;
+}
+    #btnwrk{
+      -ms-grid-row: 5;
+      -ms-grid-column: 7;
+      -ms-grid-column-span: 3;
+}
+    .feat{
+      -ms-grid-row: 5;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
+}
+    .wrk{
+      -ms-grid-row: 5;
+      -ms-grid-column: 7;
+      -ms-grid-column-span: 3;
+} 
 }
 
 .wrk h2 { 
@@ -281,13 +347,13 @@ img.drill {
     #wrapper{
     display: -ms-grid;
     display: grid;
-    width: 1311px;
+    width: 1366px;
     height: auto;
-    -ms-grid-columns: 4% 4% 44% 32% 8% 8%;
-        grid-template-columns: 4% 4% 44% 32% 8% 8%;
-    -ms-grid-rows: 380px 380px 1fr;  
+        -ms-grid-columns: 4% 0 4% 0 44% 0 32% 0 8% 0 8%;
+        grid-template-columns: 4% 4% 44% 32% 8% 8%;  
+        -ms-grid-rows: 380px 0 380px 0 1fr;  
         grid-template-rows: 380px 380px 1fr;
-            grid-template-areas: 
+                grid-template-areas: 
     "menu menu main grn lang lang"
     "menu menu main gry . ."
     ". feat feat wrk wrk .";
@@ -300,9 +366,9 @@ img.drill {
         margin-top: 20px;
 }
     .green { 
-        width: 85%;
+        width: 84%;
         padding: 0 13%;
-        margin-left: -15%;
+        margin-left: -7%;
 }
     .grey { 
         margin-left: 20%;
