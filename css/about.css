@@ -29,9 +29,9 @@
     width: 96vw;
     max-width: 100%;
     height: auto;
-        -ms-grid-columns: 4% 0 4% 0 25% 0 17% 0 4% 0 30% 0 8% 0 8%;
-        grid-template-columns: 4% 4% 25% 17% 4% 30% 8% 8%;  
-        -ms-grid-rows: 26vw 0 7vw 0 35vw 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto;  
+-ms-grid-columns: 4% 0 4% 0 25% 0 17% 0 4% 0 30% 0 8% 0 8%;
+        grid-template-columns: 4% 4% 25% 17% 4% 30% 8% 8%;
+-ms-grid-rows: 26vw 0 7vw 0 35vw 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto;      
         grid-template-rows: 26vw 7vw 35vw auto auto auto auto auto auto auto;
                     grid-template-areas: 
     "menu menu . . . grn lang lang"
@@ -59,7 +59,7 @@
 /* title blocks */
 
 .green {
-    -ms-grid-row: 1;
+-ms-grid-row: 1;
     -ms-grid-column: 11;
     grid-area: grn;
     width: 90%;
@@ -69,8 +69,8 @@
 }
 
 .greybg {
-     -ms-grid-row: 1;
-     -ms-grid-column: 11;
+-ms-grid-row: 1;
+    -ms-grid-column: 11;
      grid-area: grn;
      display: none;
     }
@@ -141,7 +141,7 @@
 }
 
 .act1 {
-    -ms-grid-row: 9;
+   -ms-grid-row: 9;
     -ms-grid-column: 1;
     -ms-grid-column-span: 7;
     grid-area: act1;
@@ -157,7 +157,7 @@
 /* bcn pic area */
 
 .bcn {
-    -ms-grid-row: 11;
+-ms-grid-row: 11;
     -ms-grid-column: 1;
     -ms-grid-column-span: 15;
     grid-area: bcn;
@@ -215,69 +215,6 @@
     width: 100vw;
 }
 
-@media screen and (min-width: 320px) and (max-width:667px){
-    .green{
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
-}
-    .greybg{
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
-}
-    .story{
-        -ms-grid-row: 5;
-        -ms-grid-column: 1;
-}
-    .intro{
-        -ms-grid-row: 7;
-        -ms-grid-column: 1;
-}
-    .cv{
-        -ms-grid-row: 29;
-        -ms-grid-column: 1;
-}
-    .sha{
-        -ms-grid-row: 9;
-        -ms-grid-column: 1;
-}
-    .act1{
-        -ms-grid-row: 11;
-        -ms-grid-column: 1;
-}
-    .act2{
-        -ms-grid-row: 15;
-        -ms-grid-column: 1;
-}
-    .bcn{
-        -ms-grid-row: 13;
-        -ms-grid-column: 1;
-}
-    .act22{
-        -ms-grid-row: 17;
-        -ms-grid-column: 1;
-}
-    .act3{
-        -ms-grid-row: 21;
-        -ms-grid-column: 1;
-}
-    .gva{
-        -ms-grid-row: 19;
-        -ms-grid-column: 1;
-}
-    .plane{
-        -ms-grid-row: 23;
-        -ms-grid-column: 1;
-}
-    .act4{
-        -ms-grid-row: 25;
-        -ms-grid-column: 1;
-}
-    .bhz{
-        -ms-grid-row: 27;
-        -ms-grid-column: 1;
-}   
-}
-
 
 /* mobile layout */
 @media screen and (min-width: 320px) and (max-width:667px){
@@ -287,9 +224,9 @@
     width: 100vw;
     max-width: 100%;
     height: auto;
-        -ms-grid-columns: 100%;
-        grid-template-columns: 100%;  
-            -ms-grid-rows: 50.5vw 0 62vw 0 0.8fr 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto;  
+-ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+-ms-grid-rows: 50.5vw 0 62vw 0 0.8fr 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto;   
             grid-template-rows: 50.5vw 62vw 0.8fr auto auto auto auto auto auto auto auto auto auto auto auto;
                 grid-template-areas: 
     "grn"
@@ -313,8 +250,8 @@
     /* move main img to green box */      
  .greybg {
      display: block;
-     -ms-grid-row: 1;
-     -ms-grid-column: 11;
+-ms-grid-row: 1;
+        -ms-grid-column: 1;
      grid-area: grn;
      position: relative;
      background-color: #262626;
@@ -323,8 +260,9 @@
     }
     
     .green {
-    -ms-grid-row: 1; 
-    -ms-grid-column: 1;
+-ms-grid-row: 1;
+        -ms-grid-column: 1;
+     grid-area: grn;
     width: 45%;
     height: auto;
     background: #18ec9f;
@@ -335,14 +273,13 @@
     
 .eufoto {
     position: static;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
     grid-area: main;
     }
      
 .story {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
+  -ms-grid-row: 5;
+        -ms-grid-column: 1;
+     grid-area: stry;
     width: 60%;
     padding-top: 2em;
     }
@@ -354,69 +291,81 @@
 }
 
 .intro {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
+-ms-grid-row: 7;
+        -ms-grid-column: 1;
+     grid-area: int;
     padding: 0 2em 2em 2em;
 }
     
 .sha {
-        -ms-grid-row: 5;
-     -ms-grid-column: 1;
+-ms-grid-row: 9;
+        -ms-grid-column: 1;
+     grid-area: sha;
     }
     
 .act1 {
-        -ms-grid-row: 6;
-     -ms-grid-column: 1;
+-ms-grid-row: 11;
+        -ms-grid-column: 1;
+     grid-area: act1;
     }
 
 .bcn {
-        -ms-grid-row: 7;
-     -ms-grid-column: 1;
+-ms-grid-row: 13;
+        -ms-grid-column: 1;
+     grid-area: bcn;
     }
     
 .act2 {
-    -ms-grid-row: 8;
-     -ms-grid-column: 1;
+-ms-grid-row: 15;
+        -ms-grid-column: 1;
+     grid-area: act2;
     padding-bottom: 1em;
 }
     
 .act22 {
-    -ms-grid-row: 9;
-     -ms-grid-column: 1;
+-ms-grid-row: 17;
+        -ms-grid-column: 1;
+     grid-area: act22;
     padding-top: 0;
 }
     
 .gva {
-    -ms-grid-row: 10;
-     -ms-grid-column: 1;
+ -ms-grid-row: 19;
+        -ms-grid-column: 1;
+     grid-area: gva;
     padding-bottom: 1em;
 }
     
 .act3 {
-    -ms-grid-row: 11;
-     -ms-grid-column: 1;
+ -ms-grid-row: 21;
+        -ms-grid-column: 1;
+     grid-area: act3;
     padding-bottom: 0;
 }
     
 .plane {
-    -ms-grid-row: 12;
-     -ms-grid-column: 1;
+ -ms-grid-row: 23;
+        -ms-grid-column: 1;
+     grid-area: pln;
 }
     
 .act4 {
-    -ms-grid-row: 13;
-     -ms-grid-column: 1;
+-ms-grid-row: 25;
+        -ms-grid-column: 1;
+     grid-area: act4;
     padding-top: 0;
 }
     
 .bhz {
-    -ms-grid-row: 14;
-     -ms-grid-column: 1;
+      -ms-grid-row: 27;
+        -ms-grid-column: 1;
+     grid-area: bhz;
 }
     
 .cv {
-    -ms-grid-row: 15;
-     -ms-grid-column: 1;
+ -ms-grid-row: 29;
+        -ms-grid-column: 1;
+     grid-area: cva;
     padding: 2em 0;
 }
 
@@ -446,8 +395,8 @@
     
 @media screen and (min-width: 1367px) {
     #wrapper{
-    width: 1366px;
-    -ms-grid-rows: 380px 80px 500px auto auto auto auto auto auto auto;  
+    width: 1366px;  
+   -ms-grid-rows: 380px 0 80px 0 500px 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto 0 auto; 
     grid-template-rows: 380px 80px 500px auto auto auto auto auto auto auto;
     margin: 0 auto;
 }
