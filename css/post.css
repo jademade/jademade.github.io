@@ -16,22 +16,26 @@ h3 {
 
 
 .ctt {
-    box-shadow: 0 -7px 0 0 #FF4854;
+    -webkit-box-shadow: 0 -7px 0 0 #FF4854;
+            box-shadow: 0 -7px 0 0 #FF4854;
     color: #FF4854;
     }
 
 .cpt {
-    box-shadow: 0 -7px 0 0 #18EC9F; 
+    -webkit-box-shadow: 0 -7px 0 0 #18EC9F;
+            box-shadow: 0 -7px 0 0 #18EC9F; 
     color: #18EC9F;
 }
 
 .stg {
-    box-shadow: 0 -7px 0 0 #0057ff; 
+    -webkit-box-shadow: 0 -7px 0 0 #0057ff;
+            box-shadow: 0 -7px 0 0 #0057ff; 
     color: #0057ff;
 }
 
 .dsn {
-   box-shadow: 0 -7px 0 0 #864aff; 
+   -webkit-box-shadow: 0 -7px 0 0 #864aff;
+           box-shadow: 0 -7px 0 0 #864aff; 
     color: #864aff;
 }
 
@@ -44,10 +48,18 @@ line-height: 0.7em;
 }
 
 .origsrc {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     text-align: center;
     border-color: black;
     border-style: solid;
@@ -63,14 +75,29 @@ line-height: 0.7em;
 
 /* main container starts */
 article{
+    display: -ms-grid;
     display: grid;
     width: 100vw;
     max-width: 100%;
     min-height: 100%;
+        -ms-grid-columns: 100%;
         grid-template-columns: 100%;  
+        -ms-grid-rows: auto 0 1fr 0 auto;  
         grid-template-rows: auto 1fr auto;
     grid-gap: 0;
     margin: 0;
+}
+article > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+article > *:nth-child(2){
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+article > *:nth-child(3){
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
 }
 
 /* header */
@@ -83,7 +110,9 @@ header {
     background-color: transparent;
     position: fixed;
     left:50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 9999;
     padding: 1vw 0;
 }
@@ -107,19 +136,24 @@ main {
 
 .cut {
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .cuttop {
     height: 100%;
-    object-fit: cover;
-    object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
 }
 
 .cutbottom {
     height: 100%;
-    object-fit: cover;
-    object-position: bottom;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
 }
 
 /* figures and captions */
