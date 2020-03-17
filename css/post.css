@@ -1,0 +1,274 @@
+/* post styling */
+/* text styles */
+h1.attl {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.4em;  
+}
+
+h3 {
+    font-size: 0.7em;
+    font-weight: 400;
+    word-spacing: 1.5em;
+    text-transform: uppercase;
+}
+
+
+.ctt {
+    box-shadow: 0 -7px 0 0 #FF4854;
+    color: #FF4854;
+    }
+
+.cpt {
+    box-shadow: 0 -7px 0 0 #18EC9F; 
+    color: #18EC9F;
+}
+
+.stg {
+    box-shadow: 0 -7px 0 0 #0057ff; 
+    color: #0057ff;
+}
+
+.dsn {
+   box-shadow: 0 -7px 0 0 #864aff; 
+    color: #864aff;
+}
+
+.dropcap p:first-letter {
+  float: left;
+  font-size: 5.5em;
+line-height: 0.7em;
+  padding-top: 0.1em;
+  padding-right: 0.2em;
+}
+
+.origsrc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px 0;
+    padding: 0.75em;
+    margin-bottom: 2em;
+}
+
+.origsrc p {
+    padding-bottom: 0;
+    font-style: italic;
+}
+
+/* main container starts */
+article{
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100%;
+        grid-template-columns: 100%;  
+        grid-template-rows: auto 1fr auto;
+    grid-gap: 0;
+    margin: 0;
+}
+
+/* header */
+header {
+    padding: 0 3%;
+}
+
+/* header fixed title */
+.top {
+    background-color: transparent;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 1vw 0;
+}
+
+/* post title and excerpt */
+.topdiva {
+    margin-top: 18vw;
+    padding: 0 35% 0 5%;
+}
+
+/* main */
+main {
+    padding: 2% 20% 2% 8%;
+}
+
+/* image container */
+.pix {
+    height: 40vw;
+    margin-bottom: 2%;
+}
+
+.cut {
+    height: 100%;
+    object-fit: cover;
+}
+
+.cuttop {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.cutbottom {
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* figures and captions */
+figure {
+    position: relative;
+  float: none;
+  width: 100%;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 0.5em;
+    font-weight: 100;
+  border: none;
+  margin: 0.5em 0.5em 4em 0.5em;
+  padding: 0;
+}
+    
+figure div {
+    height: 40vw;
+    margin: 0;
+}
+
+figure.mainimg {
+    margin: 0;
+}
+
+figure.side {
+    position: relative;
+  float: right;
+  width: 30%;
+      margin: 1em 1em 3em 1em;
+}
+
+figcaption {
+    padding: 0.7em;
+    line-height: 1.5;
+    border: 1px black solid;
+    background: #fff;
+    position: absolute;
+    bottom: -20px;
+    right: -40px;
+}
+
+figcaption.mnimg {
+    padding: 0.7em;
+    line-height: 1.5;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+figcaption.side {
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+}
+
+span.figauthor {
+    opacity: 0.5;
+}
+span.figauthor:before {
+    content:  " \00a9  ";
+}
+
+/*video embed */
+div.vid {
+    position: relative;
+    padding-top:56.25%;
+    margin-bottom: 2%;
+}
+
+iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/* media query tablet */
+@media only screen and (min-width: 426px) and (max-width:768px){
+    .topdiva {
+    margin-top: 22vw;
+    padding: 0 7%;
+}
+
+/* main */
+main {
+    padding: 2% 10%;
+}
+
+/* image container */
+.pix {
+    height: 50vw;
+}
+}
+
+
+@media only screen and (min-width: 426px) and (max-width:1024px){   
+    figure.side {
+  width: 50%;
+}
+
+figcaption {
+   position: static;
+}
+
+
+figcaption.side {
+    position: static;
+}
+}
+    
+
+/* media query mobile*/
+@media only screen and (max-width:425px){
+    .topdiva {
+    margin-top: 26vw;
+    padding: 0 7%;
+}
+
+/* main */
+main {
+    padding: 2% 10%;
+}
+
+/* image container */
+.pix {
+    height: 50vw;
+}
+    
+figure {
+    margin: 0 0 3em 0;   
+    }
+    
+figure.side {
+    float: none;
+    width: 100%;
+    margin: 0 0 3em 0;
+    }
+
+figcaption {
+   position: static;
+}
+
+
+figcaption.side {
+    position: static;
+}
+}
