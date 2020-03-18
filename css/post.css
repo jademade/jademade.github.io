@@ -170,8 +170,11 @@ figure {
 }
     
 figure div {
-    height: 40vw;
     margin: 0;
+}
+
+figure div.midl {
+    height: 40vw;
 }
 
 figure.mainimg {
