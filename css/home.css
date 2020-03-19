@@ -80,12 +80,12 @@ header {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     z-index: 9999;
-    padding: 1vw 0;
+    padding: 0;
 }
 
 /* header img */
 .eu { 
-    padding: 7vw 0 0 0;
+    padding: 10vw 0 0 0;
 }
 
 /* main */
@@ -206,6 +206,10 @@ content: "";
 
 /* media query mobile */
 @media only screen and (max-width:425px){
+    .eu { 
+    padding: 15vw 0 0 0;
+}
+    
     hr.ctg {
     width: 90%; 
 }
@@ -239,6 +243,9 @@ content: "";
 
 /* media query tablet */
 @media only screen and (min-width: 426px) and (max-width:768px){
+    .eu { 
+    padding: 12vw 0 0 0;
+}
         hr.ctg {
     width: 75%; 
 }
